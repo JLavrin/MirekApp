@@ -22,8 +22,16 @@ const ContractOne = () => {
         ...data
       })
     })
-      .then(res => res.json())
-      .then(res => console.log(res))
+      .then(res => res.blob())
+      .then(blob => {
+        var url = window.URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = "Umowa.docx";
+        document.body.appendChild(a); // we need to append the element to the dom -> otherwise it will not work in firefox
+        a.click();
+        a.remove();
+      })
       .catch(err => console.log(err))
 
     toast.promise(waitForReponse,
@@ -54,14 +62,6 @@ const ContractOne = () => {
       case 'subscriptionString': text = 'Opłata abonamentowa słownie:'; break;
       case 'subscriptionAfterContractEnd': text = 'Opłata po zakonczeniu umowy:'; break;
     }
-    // return(
-    //   <ListItem key={index}>
-    //     <ListItemIcon></ListItemIcon>
-    //     <ListItemText>{index}. {text}</ListItemText>
-    //     <ListItemText>{data[key] !== '' ? data[key] : 'nie podano'}</ListItemText>
-    //   </ListItem>
-    // )
-
     return(
       <Box key={index}>
         <LeftBox><Typography>{++index}. {text}</Typography></LeftBox>
