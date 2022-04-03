@@ -10,6 +10,11 @@ export default defineConfig({
         target: 'http://localhost:5000/api/client/update',
         changeOrigin: false,
         rewrite: (path) => path.replace(/^\/update/, '')
+      },
+      '/api': {
+        target: 'https://mirekapp.herokuapp.com/api/client/update',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
   },

@@ -13,7 +13,7 @@ const ContractOne = () => {
 
   const sendDataAgreement = (event: any) => {
 
-    const waitForReponse = fetch('/update', {
+    const waitForReponse = fetch('/api', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
