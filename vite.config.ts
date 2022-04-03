@@ -4,6 +4,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
   server: {
+    base:'/MirekApp/',
     host: true,
     proxy: {
       '/update': {

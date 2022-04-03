@@ -13,7 +13,7 @@ const ContractOne = () => {
 
   const sendDataAgreement = (event: any) => {
 
-    const waitForReponse = fetch('/api', {
+    const waitForReponse = fetch('https://mirekapp.herokuapp.com/api/client/update', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
