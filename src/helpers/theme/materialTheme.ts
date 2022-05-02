@@ -52,11 +52,58 @@ const theme = createTheme({
       main: mainPalette.standard,
       dark: mainPalette.dark
     },
-    secondary:{
+    secondary: {
       main: mainPalette.contrast,
     }
   },
   spacing: 8,
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        textPrimary: {
+          textTransform: 'capitalize',
+          borderRadius: 0,
+          color: mainPalette.standard,
+          '&:hover': {
+            color: mainPalette.standard,
+            borderBottom: `3px solid ${mainPalette.standard}`,
+          },
+        },
+        textSecondary: {
+          textTransform: 'capitalize',
+          color: mainPalette.standard,
+          borderRadius: 0,
+          borderBottom: `3px solid ${mainPalette.standard}`,
+          '&:hover': {
+            color: mainPalette.standard,
+            backgroundColor: mainPalette.standard + '11'
+          },
+        },
+        containedPrimary: {
+          color: mainPalette.contrast,
+          '&:hover': {
+            color: mainPalette.contrast,
+          },
+        },
+        outlinedPrimary: {
+          color: 'red',
+          borderColor: 'red',
+          '&:hover': {
+            color: 'red',
+            borderColor: 'red',
+          },
+        },
+        outlinedSecondary: {
+          color: mainPalette.light,
+          borderColor: mainPalette.standard,
+          '&:hover': {
+            color: mainPalette.standard,
+            borderColor: mainPalette.dark
+          },
+        }
+      }
+    }
+  }
 })
 
 export default theme

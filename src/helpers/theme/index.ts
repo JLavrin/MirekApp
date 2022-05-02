@@ -1,7 +1,1 @@
-
-import materialTheme from './materialTheme'
-
-export default {
-  materialTheme
-
-}
+export {default} from './materialTheme'

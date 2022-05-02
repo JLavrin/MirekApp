@@ -1,8 +1,8 @@
 const mainPalette = {
-  light: '#f70776',
-  standard: '#c3195d',
-  dark: '#680747',
-  contrast: '#141010'
+  light: '#a393eb',
+  standard: '#5e63b6',
+  dark: '#27296d',
+  contrast: '#f5c7f7'
 } as const
 
 export default mainPalette

@@ -8,7 +8,12 @@ const StyledAppBar = styled(AppBar)`
     
 `
 const StyledToolbar = styled(Toolbar)`
-  background-color: ${mainPalette.light}
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  
+  
+  background-color: ${mainPalette.standard}
   
 `
 const StyledIconButton = styled(IconButton)`
@@ -33,7 +38,23 @@ const StyledBox = styled(Box)`
 `
 
 const StyledLink = styled(Link)`
-text-decoration: none;
+  text-decoration: none;
+`
+const StyledTitle = styled.div`
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black; 
+`
+
+const StyledTypography = styled(Typography)`
+  position: absolute;
+  bottom: 80px;
+  left: 10px;
 `
 
 export {
@@ -44,5 +65,7 @@ export {
   StyledToolbar,
   StyledDrawer,
   StyledBox,
-  StyledLink
+  StyledLink,
+  StyledTitle,
+  StyledTypography
 }
